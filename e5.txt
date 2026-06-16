@@ -1,0 +1,33 @@
+Experiment 5: Stashing Changes
+# Create repository
+mkdir Exp5
+cd Exp5
+git init
+
+echo "Original Content" > file.txt
+
+git add .
+git commit -m "Initial Commit"
+
+# Modify file
+echo "Temporary Change" >> file.txt
+
+# Save changes
+git stash
+
+# View stashes
+git stash list
+
+# Create new branch
+git checkout -b feature
+
+# Restore changes
+git stash apply
+
+# OR
+git stash pop
+Exam Question:
+"Write commands to stash changes, switch branch and apply stash."
+git stash
+git checkout feature
+git stash apply

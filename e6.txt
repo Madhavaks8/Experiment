@@ -1,0 +1,48 @@
+Experiment 6: Collaboration Workflow
+# Create repository
+mkdir Exp6
+cd Exp6
+
+# Initialize Git
+git init
+
+# Create initial file
+echo "Main Project" > project.txt
+
+# Stage and commit
+git add .
+git commit -m "Initial Commit"
+
+# Create feature branch
+git checkout -b feature-login
+
+# Add feature
+echo "Login Module Added" >> project.txt
+
+# Stage and commit feature
+git add .
+git commit -m "Added Login Feature"
+
+# Push feature branch to remote
+git push -u origin feature-login
+
+# Fetch latest changes from remote
+git fetch origin
+
+# Merge latest main branch changes
+git merge origin/main
+
+# OR Rebase with main branch
+git rebase origin/main
+
+# Switch to main branch
+git checkout master
+
+# Merge feature branch
+git merge feature-login
+
+# Delete feature branch
+git branch -d feature-login
+
+# View branch list
+git branch

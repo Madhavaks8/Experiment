@@ -1,0 +1,53 @@
+8. Write the command to display the last five commits in the repository's history", if the examiner expects a complete executable program from scratch, use the following sequence:
+
+# Create directory
+mkdir Exp8
+cd Exp8
+
+# Initialize repository
+git init
+
+# Create Commit 1
+echo "Version 1" > file.txt
+git add .
+git commit -m "Commit 1"
+
+# Create Commit 2
+echo "Version 2" >> file.txt
+git add .
+git commit -m "Commit 2"
+
+# Create Commit 3
+echo "Version 3" >> file.txt
+git add .
+git commit -m "Commit 3"
+
+# Create Commit 4
+echo "Version 4" >> file.txt
+git add .
+git commit -m "Commit 4"
+
+# Create Commit 5
+echo "Version 5" >> file.txt
+git add .
+git commit -m "Commit 5"
+
+# Create Commit 6
+echo "Version 6" >> file.txt
+git add .
+git commit -m "Commit 6"
+
+# Display last 5 commits
+git log -5
+
+# Alternative short format
+git log --oneline -5
+Expected Output
+git log --oneline -5
+
+Output similar to:
+a1b2c3d Commit 6
+e4f5g6h Commit 5
+i7j8k9l Commit 4
+m1n2o3p Commit 3
+q4r5s6t Commit 2

@@ -1,0 +1,25 @@
+Experiment 1: Local Git Configuration, Repository Creation, Commit History
+# Configure Git
+git config --global user.name "YourName"
+git config --global user.email "yourmail@example.com"
+
+# Create repository
+mkdir Exp1
+cd Exp1
+git init
+
+# Create file
+echo "Hello Git" > file1.txt
+
+# Check status
+git status
+
+# Stage file
+git add file1.txt
+
+# Commit
+git commit -m "Initial Commit"
+
+# View history
+git log
+git log --oneline

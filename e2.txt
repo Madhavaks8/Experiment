@@ -1,0 +1,24 @@
+Experiment 2: Create Repository and Push to Remote
+# Create repository
+mkdir Exp2
+cd Exp2
+git init
+
+# Create file
+echo "Project File" > project.txt
+
+# Stage and commit
+git add .
+git commit -m "First Commit"
+
+# Connect GitHub repository
+git remote add origin https://github.com/username/repository.git
+
+# Verify remote
+git remote -v
+
+# Rename branch
+git branch -M main
+
+# Push repository
+git push -u origin main

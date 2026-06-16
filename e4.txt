@@ -1,0 +1,34 @@
+Experiment 4: Branching and Merging
+# Create repository
+mkdir Exp4
+cd Exp4
+git init
+
+# Create initial file
+echo "Version 1" > app.txt
+
+git add .
+git commit -m "Initial Commit"
+
+# Create branch
+git checkout -b feature
+
+# Modify file
+echo "Feature Added" >> app.txt
+
+git add .
+git commit -m "Feature Commit"
+
+# Switch to main branch
+git checkout master
+
+# Merge branch
+git merge feature
+
+# View branches
+git branch
+
+# Rebase example
+git checkout feature
+git rebase master
+

@@ -1,0 +1,35 @@
+Experiment 7: Advanced Git Concepts
+Reset Commands
+mkdir Exp7
+cd Exp7
+
+git init
+
+echo "v1" > file.txt
+git add .
+git commit -m "Commit 1"
+
+echo "v2" >> file.txt
+git add .
+git commit -m "Commit 2"
+
+# Soft Reset
+git reset --soft HEAD~1
+
+# Mixed Reset
+git reset HEAD~1
+
+# Hard Reset
+git reset --hard HEAD~1
+Interactive Rebase
+git rebase -i HEAD~2
+Tags
+git tag v1.0
+
+git tag -a v2.0 -m "Release Version 2.0"
+
+git tag
+
+git push origin v1.0
+
+git push --tags

@@ -1,0 +1,28 @@
+Experiment 3: Pull Updates, Fetch and Merge
+mkdir OriginalRepo
+cd OriginalRepo
+git init
+
+echo "Version 1" > file.txt
+git add .
+git commit -m "Initial Commit"
+
+cd ..
+git clone --bare OriginalRepo RemoteRepo.git
+
+git clone RemoteRepo.git LocalRepo
+git clone RemoteRepo.git DeveloperRepo
+
+cd DeveloperRepo
+echo "Version 2" >> file.txt
+git add .
+git commit -m "Second Commit"
+git push origin master
+
+cd ../LocalRepo
+git fetch origin
+git log origin/master --oneline
+git diff master origin/master
+git merge origin/master
+
+git pull origin master

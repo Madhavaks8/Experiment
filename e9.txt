@@ -1,0 +1,32 @@
+Experiment 9: Cherry-Pick a Range of Commits
+# Create repository
+mkdir Exp9
+cd Exp9
+git init
+
+echo "Initial" > file.txt
+git add .
+git commit -m "Initial Commit"
+
+# Create bugfix branch
+git checkout -b bugfix
+
+echo "Fix1" >> file.txt
+git add .
+git commit -m "Bug Fix 1"
+
+echo "Fix2" >> file.txt
+git add .
+git commit -m "Bug Fix 2"
+
+# View commit IDs
+git log --oneline
+
+# Switch branch
+git checkout master
+
+# Cherry-pick one commit
+git cherry-pick <commit-id>
+
+# Cherry-pick range
+git cherry-pick <start-commit>^..<end-commit>

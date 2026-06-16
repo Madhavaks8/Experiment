@@ -1,0 +1,44 @@
+Experiment 10: Commit History by Author and Date
+# Create repository
+mkdir Exp10
+cd Exp10
+
+# Initialize Git
+git init
+
+# Configure Author
+git config user.name "JohnDoe"
+git config user.email "john@example.com"
+
+# Commit 1
+echo "Version 1" > file.txt
+git add .
+git commit -m "Commit 1"
+
+# Commit 2
+echo "Version 2" >> file.txt
+git add .
+git commit -m "Commit 2"
+
+# Commit 3
+echo "Version 3" >> file.txt
+git add .
+git commit -m "Commit 3"
+
+# Display last five commits
+git log -5
+
+# Display commits by author
+git log --author="JohnDoe"
+
+# Display commits after date
+git log --since="2026-06-016"
+
+# Display commits before date
+git log --until="2026-06-17"
+
+# Display commits by author within date range
+git log --author="JohnDoe" --since="2026-06-16" --until="2026-06-17"
+
+# Compact format
+git log --author="JohnDoe" --since="2026-06-16" --until="2026-06-17" –oneline
