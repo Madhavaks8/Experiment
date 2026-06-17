@@ -27,9 +27,9 @@ Tags
 git tag v1.0
 
 git tag -a v2.0 -m "Release Version 2.0"
-
+git show v2.0
 git tag
-
+git tag -d v2.0
 git push origin v1.0
 
 git push --tags
