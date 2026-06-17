@@ -1,4 +1,5 @@
 Experiment 1: Local Git Configuration, Repository Creation, Commit History
+git log --all --author="Madhavaks7" --since="2026-03-14" --until="2026-06-14" --pretty=format:"%h - %ad - %s" --date=short
 # Configure Git
 git config --global user.name "YourName"
 git config --global user.email "yourmail@example.com"
